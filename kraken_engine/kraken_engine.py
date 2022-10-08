@@ -4,7 +4,7 @@ import json
 import uuid
 import queue
 from threading import Thread
-from kraken_engine.decorators import error_log
+#from kraken_engine.decorators import error_log
 import tldextract
 import operator
 import kraken_schema_org as norm 
