@@ -367,5 +367,7 @@ def api_get_observations2():
 
 
 def run_api():
-    app.run(host='0.0.0.0', debug=False)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
+    #app.run(host='0.0.0.0', debug=False)
 
