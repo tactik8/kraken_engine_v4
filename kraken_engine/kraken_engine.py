@@ -26,7 +26,7 @@ entity_cache = {}
 id_cache = {}
 
 
-db = Db('data/test30')
+db = Db('/data/test30')
 
 
 
