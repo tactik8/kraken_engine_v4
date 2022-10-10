@@ -56,6 +56,7 @@ def post_daemon():
         
         if record:
             post(record)
+            print('Queue size', post_queue.qsize())
 
 def post_to_queue(record):
     post_queue.put(record)
