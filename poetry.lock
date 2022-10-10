@@ -10,6 +10,18 @@ python-versions = "*"
 pycares = ">=4.0.0"
 
 [[package]]
+name = "ansi2html"
+version = "1.8.0"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+docs = ["sphinx", "setuptools-scm", "sphinx-rtd-theme"]
+test = ["pytest", "pytest-cov"]
+
+[[package]]
 name = "backports.zoneinfo"
 version = "0.2.1"
 description = "Backport of the standard library zoneinfo module"
@@ -414,6 +426,18 @@ six = ">=1.4.0"
 test = ["pytest (>=2.2.3)", "flake8 (>=2.4.0)", "isort (>=4.2.2)"]
 
 [[package]]
+name = "waitress"
+version = "2.1.2"
+description = "Waitress WSGI server"
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[package.extras]
+docs = ["Sphinx (>=1.8.1)", "docutils", "pylons-sphinx-themes (>=1.0.9)"]
+testing = ["pytest", "pytest-cover", "coverage (>=5.0)"]
+
+[[package]]
 name = "werkzeug"
 version = "2.0.3"
 description = "The comprehensive WSGI web application library."
@@ -427,10 +451,11 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "855bba619e9c0c61dfcc8b1af1b3a4d299e3c8865852b708eadc5074bc477e8a"
+content-hash = "b7cdb57da5812b4317ff745b5e78ab780cca5a927859aeedd7bb05278de29ba5"
 
 [metadata.files]
 aiodns = []
+ansi2html = []
 "backports.zoneinfo" = []
 certifi = []
 cffi = []
@@ -466,4 +491,5 @@ tzlocal = []
 url-normalize = []
 urllib3 = []
 validators = []
+waitress = []
 werkzeug = []

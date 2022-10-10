@@ -17,7 +17,7 @@ import time
 import uuid
 import random
 
-
+from kraken_engine import performance_trace as trace
 
 
 
@@ -363,11 +363,55 @@ def api_get_observations2():
 
     return jsonify(records)
 
+@app.route('/admin', methods=['GET'])
+def api_get_admin():
 
+    content = '<h1>Admin console</H1><br>'
+    content +='<a href="/admin/trace">Trace</a>'
+    
+    return Response(content)
+
+@app.route('/admin/trace', methods=['GET'])
+def api_get_admin_trace():
+
+    content = '<h1>Admin console - Trace</H1><br>'
+    content += '<H2>Trace Status: {status}<H2>'.format(status=trace.get_status())
+    content +='<a href="/admin/trace/start">Start trace</a><br>'
+    content +='<a href="/admin/trace/stop">Stop trace</a><br>'
+
+    if trace.get_status()=='completed':
+        trace_content = trace.get()
+        print(trace_content)
+        trace_content.replace('\n', '<br>')
+        
+        from ansi2html import Ansi2HTMLConverter
+        conv = Ansi2HTMLConverter(dark_bg=False)
+        #trace_contentansi = "".join(sys.stdin.readlines())
+        html = conv.convert(trace_content)
+
+        content += html
+    
+    return Response(content)
+
+    
+@app.route('/admin/trace/start', methods=['GET'])
+def api_get_admin_trace_start():
+
+    content = 'Admin console'
+    trace.start()
+    
+    return redirect('/admin/trace')
+
+@app.route('/admin/trace/stop', methods=['GET'])
+def api_get_admin_trace_stop():
+
+    content = 'Admin console'
+    trace.stop()
+    return redirect('/admin/trace')
 
 
 def run_api():
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=8080)
-    #app.run(host='0.0.0.0', debug=False)
+    #from waitress import serve
+    #serve(app, host="0.0.0.0", port=8080)
+    app.run(host='0.0.0.0', debug=False)
 

@@ -1,0 +1,15 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.rst
+VERSION
+setup.cfg
+setup.py
+email_normalize/__init__.py
+email_normalize/providers.py
+email_normalize.egg-info/PKG-INFO
+email_normalize.egg-info/SOURCES.txt
+email_normalize.egg-info/dependency_links.txt
+email_normalize.egg-info/requires.txt
+email_normalize.egg-info/top_level.txt
+email_normalize.egg-info/zip-safe

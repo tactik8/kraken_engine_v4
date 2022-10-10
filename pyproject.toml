@@ -10,6 +10,8 @@ tldextract = "^3.2.0"
 kraken-schema-org = "^0.0.8"
 kraken-datatype = "^0.0.7"
 Flask = "^2.0.3"
+waitress = "^2.1.2"
+ansi2html = "^1.8.0"
 
 [tool.poetry.dev-dependencies]
 

@@ -4,14 +4,19 @@ from kraken_db import db_config
 from kraken_db import data_manipulation as data
 from kraken_db import sql_commands as sql
 import datetime
+import os
 
 DB_PATH = 'db/db_test.sqlite'
-
 
 
 def init(db_path = DB_PATH):
     """
     Initializes db, returns connection"""
+
+    # Create directory
+    os.makedirs(os.path.dirname(db_path), exist_ok=True)
+
+    
 
     conn = db_connect.create_connection(db_path)
     db_config.db_config_records(conn)

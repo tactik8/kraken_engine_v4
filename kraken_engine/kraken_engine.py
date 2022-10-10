@@ -546,7 +546,7 @@ def find_id_by_sameas(entity):
 def run_api(url = None):
     
     #db.set_db_url(DBURL)
-
+    print('Starting')
     flask_routes.run_api()
 
 

@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: kraken-schema-org
+Version: 0.0.8
+Summary: Kraken schema.org
+Home-page: https://github.com/tactik8/kraken_datatype2
+Author: Tactik8
+Author-email: info@tactik8.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: url-normalize
+Requires-Dist: validators
+Requires-Dist: dateparser
+Requires-Dist: pycountry
+Requires-Dist: email-normalize
+Requires-Dist: cleanco
+Requires-Dist: phonenumbers
+
+Library to schema_org
+
+
+How to use:
+
+from kraken_schema_org import kraken_schema_org as k
+
+normalize_type:
+record_type = 'person'
+normalized_type = k.normalize_type(record_type)
+
+normalize_key:
+key = 'givenname'
+normalized_key = k.normalize_key(key)
+
+get_keys:
+record_type = 'person'
+keys = k.get_keys(record_type)
+
+get_datatype():
+record_type = 'schema:Person'
+key = 'schema:givenName'
+datatypes = k.get_datatype(record_type, key)
+
+
+

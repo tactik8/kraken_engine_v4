@@ -1,0 +1,81 @@
+bob
+Mon Oct 10 16:44:17 2022    example.stats
+
+         973 function calls (969 primitive calls) in 0.001 seconds
+
+   Ordered by: cumulative time
+   List reduced from 229 to 70 due to restriction <70>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.001    0.001 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/serving.py:262(write)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/wrappers/response.py:621(__call__)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/wrappers/response.py:602(get_wsgi_response)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/wrappers/response.py:480(get_wsgi_headers)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/serving.py:381(send_response)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/serving.py:405(log_request)
+        2    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:715(uri_to_iri)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/serving.py:441(log)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/wsgi.py:37(get_current_url)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/_internal.py:206(_log)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/sansio/utils.py:104(get_current_url)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/logging/__init__.py:1436(info)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/logging/__init__.py:1565(_log)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/logging/__init__.py:1591(handle)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/logging/__init__.py:1645(callHandlers)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/logging/__init__.py:941(handle)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/logging/__init__.py:1073(emit)
+        3    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:753(iri_to_uri)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/utils.py:527(redirect)
+        2    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:187(decode_netloc)
+        1    0.000    0.000    0.000    0.000 {method 'write' of '_io.TextIOWrapper' objects}
+        5    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:457(url_parse)
+       10    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:626(url_unquote)
+        7    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:547(url_quote)
+       10    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:387(_unquote_to_bytes)
+        3    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/socketserver.py:825(write)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/socketserver.py:501(shutdown_request)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/flask/app.py:1521(finalize_request)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/wrappers/response.py:166(__init__)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/http/server.py:587(date_time_string)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/email/utils.py:126(formatdate)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/flask/ctx.py:462(auto_pop)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:1037(url_join)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/flask/ctx.py:423(pop)
+        3    0.000    0.000    0.000    0.000 {method 'sendall' of '_socket.socket' objects}
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/logging/__init__.py:1550(makeRecord)
+        2    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/_internal.py:492(_decode_idna)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/logging/__init__.py:288(__init__)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/sansio/response.py:110(__init__)
+        4    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/datastructures.py:1236(__setitem__)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:166(encode_netloc)
+        7    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/flask/app.py:1864(process_response)
+        4    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:595(url_unparse)
+      169    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        7    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/_internal.py:511(<genexpr>)
+        4    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/datastructures.py:1150(set)
+    27/23    0.000    0.000    0.000    0.000 {method 'decode' of 'bytes' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method fromtimestamp}
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/wrappers/response.py:573(get_app_iter)
+        5    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/_internal.py:505(decode_part)
+        1    0.000    0.000    0.000    0.000 {method 'shutdown' of '_socket.socket' objects}
+        4    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:450(_url_unquote_legacy)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/serving.py:390(version_string)
+        3    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/local.py:428(__get__)
+        5    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/_internal.py:82(_check_str_tuple)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/flask/app.py:1633(make_response)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/email/utils.py:155(format_datetime)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/http/server.py:583(version_string)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/socketserver.py:511(close_request)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/wsgi.py:438(__init__)
+        1    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/serving.py:156(server_version)
+        8    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/http/server.py:593(log_date_time_string)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/http/server.py:525(end_headers)
+        5    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/http/server.py:511(send_header)
+        1    0.000    0.000    0.000    0.000 /nix/store/2vm88xw7513h9pyjyafw32cps51b0ia1-python3-3.8.12/lib/python3.8/socket.py:496(close)
+        3    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/local.py:559(_get_current_object)
+        3    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/urls.py:91(port)
+        2    0.000    0.000    0.000    0.000 /home/runner/krakenenginev4/venv/lib/python3.8/site-packages/werkzeug/local.py:237(pop)
+
+

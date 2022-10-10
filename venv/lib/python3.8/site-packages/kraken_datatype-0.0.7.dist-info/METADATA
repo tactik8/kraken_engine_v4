@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: kraken-datatype
+Version: 0.0.7
+Summary: Kraken datatype
+Home-page: https://github.com/tactik8/kraken_datatype2
+Author: Tactik8
+Author-email: info@tactik8.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: url-normalize
+Requires-Dist: validators
+Requires-Dist: dateparser
+Requires-Dist: pycountry
+Requires-Dist: email-normalize
+Requires-Dist: cleanco
+Requires-Dist: phonenumbers
+
+Library to extract, validate and normalize datatypes. 
+
+
+How to use:
+
+import kraken_datatype as dt 
+
+result = dt.validate('email', 'name@test.com')
+print(result)
+
+
+
+
