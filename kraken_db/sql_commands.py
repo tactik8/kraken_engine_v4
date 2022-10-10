@@ -1,6 +1,12 @@
 
 import sqlite3
 import datetime
+import os
+
+
+filepath = 'log_query/log_file.txt'
+os.makedirs(os.path.dirname(filepath), exist_ok=True)
+
 
 def sql_data_to_list_of_dicts(conn, select_query):
       """Returns data from an SQL query as a list of dicts."""
