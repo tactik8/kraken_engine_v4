@@ -59,6 +59,10 @@ def post_daemon():
             print('Queue size', post_queue.qsize())
 
 def post_to_queue(record):
+    
+    post(record)
+    return
+    
     post_queue.put(record)
     print('Queue size', post_queue.qsize())
     return
