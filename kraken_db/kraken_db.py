@@ -24,7 +24,7 @@ def init(db_path = DB_PATH):
 
     #sql.sql_fix_records(conn)
     #sql.sql_fix_observations(conn)
-    sql.sql_remove_duplicates(conn)
+    #sql.sql_remove_duplicates(conn)
     
     return conn
 
