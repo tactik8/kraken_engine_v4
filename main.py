@@ -1,7 +1,9 @@
 import os
-
+from kraken_engine import performance_trace as trace
 
 test_mode = False
+
+trace.start()
 
 if test_mode == True:
     if __name__ == '__main__':
