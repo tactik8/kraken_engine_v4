@@ -12,7 +12,7 @@ if test_mode == True:
 
 else:
 
-    import kraken_engine.kraken_engine as e
+    #import kraken_engine.kraken_engine as e
     import kraken_engine.flask_routes as route
 
     route.run_api()

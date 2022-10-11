@@ -26,8 +26,17 @@ entity_cache = {}
 id_cache = {}
 
 
-db = Db('/data/test30')
+import os
+db_path = 'data/test30'
 
+try:
+    os.makedirs(os.path.dirname('/' + db_path), exist_ok=True)
+    db_path = '/' + db_path
+
+except:
+    a=1
+
+db = Db(db_path)
 
 
 def init_daemon():
@@ -557,4 +566,4 @@ def run_api(url = None):
 
 
 
-init_daemon()
+#init_daemon()
