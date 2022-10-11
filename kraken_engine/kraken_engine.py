@@ -38,9 +38,12 @@ except:
 
 db = Db(db_path)
 
+daemon_start = False
 
 def init_daemon():
 
+
+    global daemon_start
     # Init queue
     global post_queue
     post_queue = queue.Queue()
@@ -50,6 +53,8 @@ def init_daemon():
     thread.setDaemon(True)
     thread.start()
     print('Daemon started')
+    daemon_start = True
+
 
 
 def get_daemon_queue_size():
@@ -60,6 +65,11 @@ def get_daemon_queue_size():
 
 
 def post_daemon():
+
+    global daemon_start
+    if not daemon_start:
+        init_daemon()
+
     global post_queue
     while True:
         record = post_queue.get()
