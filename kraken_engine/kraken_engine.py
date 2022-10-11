@@ -83,8 +83,8 @@ def post_to_queue(record):
     if not daemon_start:
         init_daemon()
     
-    #post(record)
-    #return
+    post(record)
+    return
     
     post_queue.put(record)
     print('Queue size', post_queue.qsize())
