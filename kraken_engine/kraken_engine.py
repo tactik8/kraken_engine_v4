@@ -49,11 +49,12 @@ def init_daemon():
     post_queue = queue.Queue()
 
     # Init daemon
+    daemon_start = True
     thread = Thread(target=post_daemon)
     thread.setDaemon(True)
     thread.start()
     print('Daemon started')
-    daemon_start = True
+    
 
 
 
