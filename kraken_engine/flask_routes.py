@@ -7,7 +7,7 @@ from flask import redirect
 from flask import url_for
 from flask import jsonify
 import kraken_schema_org as norm 
-
+import psutil
 import kraken_engine.kraken_engine as engine
 
 from kraken_engine.class_log import Kraken_log as Log
@@ -367,7 +367,11 @@ def api_get_admin():
 
     content = '<h1>Admin console</H1><br>'
     content +='<a href="/admin/trace">Trace</a><br>'
-    content += 'Queue size:{size}'.format(size=str(engine.get_daemon_queue_size()))
+    content += 'Queue size:{size} <br>'.format(size=str(engine.get_daemon_queue_size()))
+    
+    content += 'memory:' + str(psutil.virtual_memory().percent) + '<br>'
+    content += 'cpu:' + str(psutil.cpu_percent()) + '<br>'
+    
     return Response(content)
 
 @app.route('/admin/trace', methods=['GET'])
@@ -411,6 +415,6 @@ def api_get_admin_trace_stop():
 
 def run_api():
     from waitress import serve
-    serve(app, host="0.0.0.0", port=8080, threads= 8)
+    serve(app, host="0.0.0.0", port=8080, threads= 20)
     #app.run(host='0.0.0.0', debug=False)
 
