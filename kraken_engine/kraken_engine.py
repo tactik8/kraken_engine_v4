@@ -16,7 +16,7 @@ from kraken_db.class_kraken_db import Kraken_db as Db
 from kraken_engine.class_entity import Entity
 
 from kraken_engine.class_entities import Entities
-from kraken_engine import flask_routes 
+#from kraken_engine import flask_routes 
 import copy
 global post_queue
 post_queue = None
@@ -553,7 +553,7 @@ def run_api(url = None):
     
     #db.set_db_url(DBURL)
     print('Starting')
-    flask_routes.run_api()
+    #flask_routes.run_api()
 
 
 
