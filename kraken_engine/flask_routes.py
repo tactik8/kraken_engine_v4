@@ -412,6 +412,6 @@ def api_get_admin_trace_stop():
 
 def run_api():
     from waitress import serve
-    serve(app, host="0.0.0.0", port=8080)
+    serve(app, host="0.0.0.0", port=8080, threads= 8)
     #app.run(host='0.0.0.0', debug=False)
 
