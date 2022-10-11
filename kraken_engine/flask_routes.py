@@ -366,16 +366,16 @@ def api_get_observations2():
 def api_get_admin():
 
 
-    content = ''
-    content += '<head><meta http-equiv="refresh”"content="1"></head>'
-    content = '<h1>Admin console</H1><br>'
+    content = '<!DOCTYPE html><html>'
+    content += '<head><meta http-equiv="Refresh" content="1"></head>'
+    content += '<h1>Admin console</H1><br>'
     content +='<a href="/admin/trace">Trace</a><br>'
-    content += 'Queue size:{size} <br>'.format(size=str(engine.get_daemon_queue_size()))
+    content += 'Queue size: {size} <br>'.format(size=str(engine.get_daemon_queue_size()))
     
-    content += 'memory:' + str(psutil.virtual_memory().percent) + '<br>'
-    content += 'cpu:' + str(psutil.cpu_percent()) + '<br>'
+    content += 'memory: ' + str(psutil.virtual_memory().percent) + '<br>'
+    content += 'cpu: ' + str(psutil.cpu_percent()) + '<br>'
 
-
+    content += '</html>'
     
     return Response(content)
 
