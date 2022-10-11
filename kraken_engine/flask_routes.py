@@ -108,6 +108,7 @@ def api_get():
     """Process get data
     """
     log = Log('api_get')
+    print('Get')
 
     record_type = request.values.get('record_type', request.values.get('@type', None))
     record_id = request.values.get('record_id', request.values.get('@id', None))

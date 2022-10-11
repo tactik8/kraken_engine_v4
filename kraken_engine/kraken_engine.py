@@ -50,7 +50,7 @@ def init_daemon():
 
     # Init daemon
     daemon_start = True
-    thread = Thread(target=post_daemon)
+    thread = Thread(target=post_daemon, args=(post_queue,))
     thread.setDaemon(True)
     thread.start()
     print('Daemon started')
@@ -61,17 +61,15 @@ def init_daemon():
 def get_daemon_queue_size():
     
     global post_queue
-    
-    return post_queue.qsize()
+
+    if post_queue:
+        return post_queue.qsize()
+    else:
+        return 'NA'
 
 
-def post_daemon():
+def post_daemon(post_queue):
 
-    global daemon_start
-    if not daemon_start:
-        init_daemon()
-
-    global post_queue
     while True:
         record = post_queue.get()
         
@@ -80,9 +78,13 @@ def post_daemon():
             print('Queue size', post_queue.qsize())
 
 def post_to_queue(record):
+
+    global daemon_start
+    if not daemon_start:
+        init_daemon()
     
-    post(record)
-    return
+    #post(record)
+    #return
     
     post_queue.put(record)
     print('Queue size', post_queue.qsize())
