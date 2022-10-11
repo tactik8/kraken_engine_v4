@@ -108,7 +108,32 @@ def get(conn, record_type=None, record_id=None, key=None, value=None):
     return records
 
 
+def get_id(conn, record_type, key, value):
+    """retrieve id
+    """
 
+    params = []
+    if record_type:
+        params.append('record_type', 'eq', record_type)
+    params.append((key, 'eq', value))
+    
+    where_clauses = []
+    where_clauses.append(data.convert_params(params))
+    
+    records = sql.sql_get_observations(conn, where_clauses, order_by, order_direction, limit, offset)
+
+
+    # Transform data from db to regular format
+    records = data.sql_db_record_to_data(records)
+
+    if records:
+        record = {
+            'record_type': records[0].get('record_type', None),
+            'record_id': records[0].get('record_id', None) 
+        }
+        return record
+    return None
+    
 
 def get_observations(conn, params, order_by = None, order_direction = None, limit = 100, offset = 0):
     """

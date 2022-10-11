@@ -203,6 +203,7 @@ def sql_get_observations(conn, wheres=None, orderby='created_date', order_direct
 
 
 
+
 def sql_get_records_observations(conn, wheres=None, orderby='created_date', order_direction='DESC', limit=1000, offset=0):
 
     orderby = 'created_date' if orderby == 'created_date' else orderby

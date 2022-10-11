@@ -86,6 +86,8 @@ def db_config_observations(conn):
     db_connect.create_index(conn, 'observations', '_value_text, key, record_type')
     
     db_connect.create_index(conn, 'observations', '_value_text, key')
+    db_connect.create_index(conn, 'observations', 'key, _value_text')
+
     db_connect.create_index(conn, 'observations', '_value_ref, key')
 
 

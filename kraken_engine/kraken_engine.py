@@ -399,7 +399,7 @@ def find_id_by_hash(entity):
             params.append(('record_type', 'eq', entity.record_type))
             params.append(('schema:sha256', 'eq', o.value))
 
-            records = db.search(params, None, None, 1, 0)
+            records = db.get_observations(params, None, None, 1, 0)
 
             if records:
                 record_id = records[0].get('record_id', records[0].get('@id', None))
@@ -431,7 +431,7 @@ def find_id_by_name(entity):
             params.append(('record_type', 'eq', entity.record_type))
             params.append(('schema:name', 'eq', o.value))
 
-            records = db.search(params, None, None, 1, 0)
+            records = db.get_observations(params, None, None, 1, 0)
 
             if records:
                 record_id = records[0].get('record_id', records[0].get('@id', None))
@@ -463,7 +463,7 @@ def find_id_by_url(entity):
             params.append(('record_type', 'eq', entity.record_type))
             params.append(('schema:url', 'eq', o.value))
 
-            records = db.search(params, None, None, 1, 0)
+            records = db.get_observations(params, None, None, 1, 0)
 
             if records:
                 record_id = records[0].get('record_id', records[0].get('@id', None))
@@ -496,7 +496,7 @@ def find_id_by_contenturl(entity):
             params.append(('record_type', 'eq', entity.record_type))
             params.append(('schema:contentUrl', 'eq', o.value))
 
-            records = db.search(params, None, None, 1, 0)
+            records = db.get_observations(params, None, None, 1, 0)
 
             if records:
                 record_id = records[0].get('record_id', records[0].get('@id', None))
@@ -526,7 +526,7 @@ def find_id_by_email(entity):
             params.append(('record_type', 'eq', entity.record_type))
             params.append(('schema:email', 'eq', o.value))
 
-            records = db.search(params, None, None, 1, 0)
+            records = db.get_observations(params, None, None, 1, 0)
 
             if records:
                 record_id = records[0].get('record_id', records[0].get('@id', None))
@@ -557,7 +557,7 @@ def find_id_by_sameas(entity):
             #todo: added "" to comply with json format of db. Fix db
             params.append(('schema:sameAs', 'eq', '"{value}"'.format(value = o.value)))
 
-            records = db.search(params)
+            records = db.get_observations(params)
             if records:
                 record_id = records[0].get('record_id', records[0].get('@id', None))
 
