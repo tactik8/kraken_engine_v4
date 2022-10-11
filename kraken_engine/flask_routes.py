@@ -35,8 +35,6 @@ app.secret_key = b'_5#mn"F4Q8z\n\xec]/'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
-engine.init_daemon()
-
 
 @app.route('/', methods=['GET'])
 def main_get():
