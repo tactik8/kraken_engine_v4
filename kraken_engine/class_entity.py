@@ -10,6 +10,9 @@ import kraken_schema_org as norm
 METADATA_TERMS = ['credibility','datasource','agent','instrument','object', 'result', 'start_time', 'end_time', 'valid']
 
 
+cache_types = {}
+
+
 class Entity:
 
 
@@ -177,7 +180,12 @@ class Entity:
         self.record_type = record.get('@type', self.record_type)
         self.record_id = record.get('@id', self.record_id)
 
-        self.record_type = norm.normalize_type(self.record_type)
+        cache_type = cache_types.get(self.record_type, None)
+        if not cache_type:
+            cache_type= norm.normalize_type(self.record_type)
+            cache_types[self.record_type] = cache_type
+        self.record_type = cache_type
+        
         record['@type'] = self.record_type
 
         # 

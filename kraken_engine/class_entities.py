@@ -42,8 +42,8 @@ class Entities:
 
         for entity in self.entities:
             for o in entity.new_observations:
-                if o not in observations:
-                    observations.append(o)
+                #if o not in observations:
+                observations.append(o)
 
         return observations
 
@@ -126,7 +126,6 @@ class Entities:
         if type(records) is list:
             for record in records:
                 self.load_from_records(record)
-
             return
 
         entity = Entity()
