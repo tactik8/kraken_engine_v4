@@ -557,7 +557,7 @@ def find_id_by_sameas(entity):
             #todo: added "" to comply with json format of db. Fix db
             params.append(('schema:sameAs', 'eq', '"{value}"'.format(value = o.value)))
 
-            records = db.get_observations(params)
+            records = db.get_observations(params, None, None, 1, 0)
             if records:
                 record_id = records[0].get('record_id', records[0].get('@id', None))
 
