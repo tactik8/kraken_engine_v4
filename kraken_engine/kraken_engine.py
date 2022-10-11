@@ -579,4 +579,4 @@ def run_api(url = None):
 
 
 
-#init_daemon()
+init_daemon()
