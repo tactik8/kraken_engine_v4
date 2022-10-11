@@ -40,6 +40,7 @@ def init_daemon():
     thread = Thread(target=post_daemon)
     thread.setDaemon(True)
     thread.start()
+    print('Daemon started')
 
 
 def get_daemon_queue_size():

@@ -35,7 +35,7 @@ app.secret_key = b'_5#mn"F4Q8z\n\xec]/'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
-
+engine.init_daemon()
 
 
 @app.route('/', methods=['GET'])
@@ -367,8 +367,8 @@ def api_get_observations2():
 def api_get_admin():
 
     content = '<h1>Admin console</H1><br>'
-    content +='<a href="/admin/trace">Trace</a>'
-    
+    content +='<a href="/admin/trace">Trace</a><br>'
+    content += 'Queue size:{size}'.format(size=str(engine.get_daemon_queue_size()))
     return Response(content)
 
 @app.route('/admin/trace', methods=['GET'])
